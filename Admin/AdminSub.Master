@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminSub.master.cs" Inherits="EnrollPortal.Admin.AdminSub" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head id="Head1" runat="server">
+        <title>eNroll Web Solutions</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+        <link href="Theme/Styles/AdminSub.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript">
+            $(document).ready(function() {
+                if ($("#nav")) {
+                    $("#nav dd").hide();
+                    $("#nav dt b").click(function() {
+                        if (this.className.indexOf("clicked") != -1) {
+                            $(this).parent().next().slideUp(200);
+                            $(this).removeClass("clicked");
+                        } else {
+                            $("#nav dt b").removeClass();
+                            $(this).addClass("clicked");
+                            $("#nav dd:visible").slideUp(200);
+                            $(this).parent().next().slideDown(500);
+                        }
+                        return false;
+                    });
+                }
+            });
+        </script>
+        <script type="text/javascript">
+            function update(returnField, returnValue) {
+                document.getElementById(returnField).value = returnValue;
+        }
+    </script>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderHead" runat="server">
+        </asp:ContentPlaceHolder>
+    </head>
+    <body style="margin: 0 auto; padding: 0 auto;">
+        <form id="form1" runat="server">
+            <div id="right" style="margin: 0 auto; padding: 0 auto;">
+                <div class="content">
+                    <div class="righttop">
+                        <div style="float: right; width: 175px; height: 25px; vertical-align: middle; text-align: center; margin-right: 28px; color: #fff; font-style: italic; margin-top: 10px;">
+                            <asp:Label ID="lblLocation" runat="server" Text=""></asp:Label>
+                        </div>
+                    </div>
+                    <div class="rightcontent">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="rightbottom">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

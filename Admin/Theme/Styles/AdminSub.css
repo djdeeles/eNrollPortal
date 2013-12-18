@@ -1,0 +1,36 @@
+﻿body { background-image: url(../images/back.jpg); background-repeat: repeat; font-family: Calibri; margin-left: auto; margin-right: auto; margin-top: 0px; font-weight: bold; font-size: 12px; }
+#wrapper { width: 960px; margin-left: 0 auto; margin-right: 0 auto; }
+#header { height: 65px; width: 960px; float: left; margin-left: 0 auto; margin-right: 0 auto; background-image: url(../images/tepe.png); }
+#footer { height: 30px; width: 960px; float: left; margin-left: 0 auto; margin-right: 0 auto; bottom: 0px; position: fixed; background-image: url(../Images/alt.png); }
+.title { width: 180px; height: 35px; margin: 14px 0px 0px 18px; float: left; vertical-align: middle; font-size: 14px; color: #003373; overflow: auto; }
+.enroll { width: 100px; height: 20px; margin: 10px 15px 10px 0px; float: right; }
+.ustMenu { height: 30px; float: right; margin: 32px 10px 10px 0px; font-weight: bold; color: #003373; font-style: italic; vertical-align: middle; font-size: 13px; }
+a { color: #003373; text-decoration: none; }
+.ustmenudiv { margin-right: 20px; float: right; margin-top: -20px; border: 0; }
+.ustmenudiv div { text-align: center; }
+.ustmenudiv img { border: 0; }
+#content { width: 960px; float: left; margin-top: 10px; margin-left: auto; margin-right: auto; }
+#left { width: 210px; float: left; }
+.leftMenu { width: 210px; margin: 0px 5px 10px 0px; }
+.lefttop { width: 210px; height: 12px; background-repeat: no-repeat; background-image: url(../Images/lefttop.png); margin: 0; padding: 0; }
+.leftbottom { width: 210px; height: 12px; background-repeat: no-repeat; background-image: url(../images/leftbottom.png); margin: 0; padding: 0; }
+.leftcontent { width: 210px; background-image: url(../Images/leftmed.png); background-repeat: repeat-y; color: #881f57; }
+#right { width: 740px; float: left; height: 100%; margin-left: 10px; }
+.content { width: 740px; margin: 0px 0px 0px 0px; color: #003373; }
+.righttop { width: 740px; height: 35px; background-image: url(../Images/righttop.png); background-repeat: no-repeat; }
+.rightbottom { width: 740px; height: 12px; background-image: url(../Images/rightbottom.png); background-repeat: no-repeat; margin-bottom: 35px; }
+.rightcontent { width: 740px; height: 100%; font-size: 12px; display: table; background-image: url(../Images/rightmed.png); background-repeat: repeat-y; padding: 5px 22px 5px 18px; }
+.rightcontent a { color: #881f57; }
+#nav { padding: 0 0 0 5px; margin: 0; }
+#nav a:hover { text-decoration: underline; }
+#nav dt b, #nav dt a { display: inline; font-weight: normal; font-size: 12px; color: #003373; height: 23px; line-height: 23px; cursor: pointer; width: 210px; font-weight: bold; }
+#nav dt { margin-left: 5px; _margin-left: 0px; _padding-left: 5px; }
+#nav dt .icon { margin: 2px 4px 2px 2px; height: 16px; width: 16px; float: left; }
+#nav dd { padding: 0; margin: 2px 0px 0px 0px; }
+#nav dd ul { padding: 0; margin: 0; list-style: none; }
+#nav dd ul li { padding-left: 10px; margin-left: 18px; }
+#nav dd ul li a { font-size: 12px; color: #881f57; text-decoration: none; font-weight: bold; line-height: 17px; }
+#product { width: 130px; border: 1px solid silver; }
+.ppic { width: 120px; height: 120px; margin: 5px 5px 5px 5px; white-space: nowrap; overflow: hidden; font-size: small; }
+.pname { width: 120px; height: 35px; margin: 5px 5px 5px 5px; text-align: center; }
+.ptxt { width: 120px; text-align: center; margin: 5px 5px 5px 5px; }

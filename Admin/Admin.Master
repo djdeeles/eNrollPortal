@@ -1,0 +1,229 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="EnrollPortal.Admin.Admin" %>
+
+<%@ Register Src="Kontroller/DillerKontrol.ascx" TagName="DillerKontrol" TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head id="Head1" runat="server">
+        <link href="Theme/Styles/Admin.css" rel="stylesheet" type="text/css" />
+        <script src="Theme/Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                if ($("#nav")) {
+                    $("#nav dd").hide();
+                    $("#nav dt b").click(function() {
+                        if (this.className.indexOf("clicked") != -1) {
+                            $(this).parent().next().slideUp(200);
+                            $(this).removeClass("clicked");
+                        } else {
+                            $("#nav dt b").removeClass();
+                            $(this).addClass("clicked");
+                            $("#nav dd:visible").slideUp(200);
+                            $(this).parent().next().slideDown(500);
+                        }
+                        return false;
+                    });
+                }
+            });
+        </script>
+        <script type="text/javascript">
+            function update(returnField, returnValue) {
+                document.getElementById(returnField).value = returnValue;
+        }
+    </script>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderHead" runat="server">
+        </asp:ContentPlaceHolder>
+    </head>
+    <body style="width: 960px;">
+        <form id="form1" runat="server">
+            <asp:ScriptManager ID="ScriptManager1" runat="server">
+            </asp:ScriptManager>
+            <div id="wrapper">
+                <div id="header">
+                    <div class="title">
+                        <asp:Label ID="LabelSiteTitle" runat="server" Text="Kurum İçi Haberleşme Portalı"></asp:Label>
+                    </div>
+                    <div class="ustMenu">
+                        <div class="ustmenudiv">
+                            <a href="../Giris/Cikis.aspx">
+                                <div>
+                                    <img src="Theme/Images/icon/cikis.png" /><br />
+                                    Çıkış</div>
+                            </a>
+                        </div>
+                        <div class="ustmenudiv">
+                            <a href="EnrollDestek.aspx">
+                                <div>
+                                    <img src="Theme/Images/icon/destek.png" /><br />
+                                    Destek</div>
+                            </a>
+                        </div>
+                        <div class="ustmenudiv">
+                            <a target="_blank" href="../default.aspx">
+                                <div>
+                                    <img src="Theme/Images/icon/site.png" /><br />
+                                    Siteyi Görüntüle</div>
+                            </a>
+                        </div>
+                        <div class="ustmenudiv">
+                            <a href="Default.aspx">
+                                <div>
+                                    <img src="Theme/Images/icon/giris.png" /><br />
+                                    Giriş</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="content">
+                    <div id="left">
+                        <div class="leftMenu">
+                            <div class="lefttop">
+                            </div>
+                            <div class="leftcontent">
+                                <dl id="nav">
+                                    <dt><b>
+                                            <img alt="Menü İçerik Yönetimi" class="icon" src="Theme/Images/menuicon/sitebilgi.png" />Site
+                                            Bilgileri Yönetimi</b></dt>
+                                    <dd>
+                                        <ul>
+                                            <li><a href="SiteBilgileriKontrol.aspx">Site Bilgileri</a></li>
+                                        </ul>
+                                    </dd>
+                                    <dt><b>
+                                            <img alt="Menü İçerik Yönetimi" class="icon" src="Theme/Images/menuicon/kullanici.png" />Kullanıcılar
+                                            Yönetimi</b></dt>
+                                    <dd>
+                                        <ul>
+                                            <li><a href="#">Kullanıcılar</a></li>
+                                            <li><a href="RollerKontrol.aspx">Roller</a></li>
+                                        </ul>
+                                    </dd>
+                                    <dt><b>
+                                            <img alt="İçerik Yönetimi" class="icon" src="Theme/Images/menuicon/menu.png" />İçerik
+                                            Yönetimi</b></dt>
+                                    <dd>
+                                        <asp:Repeater ID="RepeaterLokasyonlar" runat="server">
+                                            <HeaderTemplate>
+                                                <ul>
+                                            </HeaderTemplate>
+                                            <ItemTemplate>
+                                                <li><a href="MenulerKontrol.aspx?LokasyonId=<%#                                        Eval("Id") %>">
+                                                        <%#Eval("LokasyonAdi") %></a></li>
+                                            </ItemTemplate>
+                                            <FooterTemplate>
+                                            </ul>
+                                            </FooterTemplate>
+                                        </asp:Repeater>
+                                    </dd>
+                                    <dt><b>
+                                            <img alt="Menü İçerik Yönetimi" class="icon" src="Theme/Images/menuicon/anket.png" />Anket
+                                            Yönetimi</b></dt>
+                                    <dd>
+                                        <ul>
+                                            <li><a href="AnketKontrol.aspx">Anketler</a></li>
+                                        </ul>
+                                    </dd>
+                                    <dt><b>
+                                            <img alt="Menü İçerik Yönetimi" class="icon" src="Theme/Images/menuicon/haber.png" />Haberler
+                                            Yönetimi</b></dt>
+                                    <dd>
+                                        <ul>
+                                            <li><a href="HaberKategorileriKontrol.aspx">Haber Kategorileri</a></li>
+                                            <li><a href="HaberlerKontrol.aspx">Haberler</a></li>
+                                        </ul>
+                                    </dd>
+                                    <dt><b>
+                                            <img alt="Menü İçerik Yönetimi" class="icon" src="Theme/Images/menuicon/duyuru.png" />Duyurular
+                                            Yönetimi</b></dt>
+                                    <dd>
+                                        <ul>
+                                            <li><a href="DuyuruKategorileriKontrol.aspx">Duyuru Kategorileri</a></li>
+                                            <li><a href="DuyurularKontrol.aspx">Duyurular</a></li>
+                                        </ul>
+                                    </dd>
+                                    <dt><b>
+                                            <img alt="Menü İçerik Yönetimi" class="icon" src="Theme/Images/menuicon/duyuru.png" />Personel
+                                            Duyurular Yönetimi</b></dt>
+                                    <dd>
+                                        <ul>
+                                            <li><a href="PersonelDuyuruKategorileriKontrol.aspx">Personel Duyuru Kategorileri</a></li>
+                                            <li><a href="PersonelDuyurularKontrol.aspx">Personel Duyurular</a></li>
+                                        </ul>
+                                    </dd>
+                                    <dt><b>
+                                            <img alt="Menü İçerik Yönetimi" class="icon" src="Theme/Images/menuicon/ilan.png" />Personel
+                                            İlanlar Yönetimi</b></dt>
+                                    <dd>
+                                        <ul>
+                                            <li><a href="IlanKategorileriKontrol.aspx">Personel İlan Kategorileri</a></li>
+                                            <li><a href="IlanlarKontrol.aspx">Personel İlanlar</a></li>
+                                        </ul>
+                                    </dd>
+                                    <dt><b>
+                                            <img alt="Menü İçerik Yönetimi" class="icon" src="Theme/Images/menuicon/etkinlik.png" />Etkinlikler
+                                            Yönetimi</b></dt>
+                                    <dd>
+                                        <ul>
+                                            <li><a href="EtkinlikKategorileriKontrol.aspx">Etkinlik Kategorileri</a></li>
+                                            <li><a href="EtkinliklerKontrol.aspx">Etkinlikler</a></li>
+                                        </ul>
+                                    </dd>
+                                    <dt><b>
+                                            <img alt="Menü İçerik Yönetimi" class="icon" src="Theme/Images/menuicon/foto.png" />Foto
+                                            Galeri Yönetimi</b></dt>
+                                    <dd>
+                                        <ul>
+                                            <li><a href="FotoAlbumKategorileriKontrol.aspx">Albüm Kategorileri</a></li>
+                                            <li><a href="FotoAlbumlerKontrol.aspx">Albümler</a></li>
+                                            <li><a href="FotoAlbumGorselleriKontrol.aspx">Albüm Görselleri</a></li>
+                                        </ul>
+                                    </dd>
+                                    <dt><b>
+                                            <img alt="Menü İçerik Yönetimi" class="icon" src="Theme/Images/menuicon/egitim.png" />Eğitimler
+                                            Yönetimi</b></dt>
+                                    <dd>
+                                        <ul>
+                                            <li><a href="EgitimlerKontrol.aspx">Eğitimler</a></li>
+                                        </ul>
+                                    </dd>
+                                    <dt><b>
+                                            <img alt="Menü İçerik Yönetimi" class="icon" src="Theme/Images/menuicon/forum.png" />Forum
+                                            Yönetimi</b></dt>
+                                    <dd>
+                                        <ul>
+                                            <li><a href="ForumKategorileriKontrol.aspx">Forum Kategorileri</a></li>
+                                            <li><a href="ForumKonulariKontrol.aspx">Forum Konuları</a></li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="leftbottom">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="right">
+                        <div class="content">
+                            <div class="righttop">
+                                <div style="float: left; width: 150px; height: 25px; margin-left: 18px; margin-top: 7px;">
+                                    <uc1:DillerKontrol ID="DillerKontrol1" runat="server" />
+                                </div>
+                                <div style="float: right; width: 210px; height: 25px; vertical-align: middle; text-align: center; margin-right: 28px; color: #fff; font-style: italic; margin-top: 10px;">
+                                    <asp:Label ID="lblLocation" runat="server" Text=""></asp:Label>
+                                </div>
+                            </div>
+                            <div class="rightcontent">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolderIcerik" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                            <div class="rightbottom">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="enroll">
+                    <em><a href="http://www.enroll.com.tr" target="_blank">www.eNroll.com.tr</a></em></div>
+            </div>
+        </form>
+    </body>
+</html>

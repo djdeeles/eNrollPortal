@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="EnrollPortal.Master" %>
+
+<%@ Register Src="Kontroller/KullaniciMenusuKontrol.ascx" TagName="KullaniciMenusuKontrol"
+    TagPrefix="uc1" %>
+<%@ Register Src="Kontroller/PortalMenusuKontrol.ascx" TagName="PortalMenusuKontrol"
+    TagPrefix="uc2" %>
+<%@ Register Src="Kontroller/UstMenuKontrol.ascx" TagName="UstMenuKontrol" TagPrefix="uc3" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="Author" content="Ender ŞAHİN" />
+    <meta name="Author" content="Çetin ÇÖNE" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="App_Themes/MainTheme/Styles/Portal.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderHead" runat="server">
+    </asp:ContentPlaceHolder>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript">
+        function AraYaz(obj) {
+            if (obj.value == "") {
+                obj.value = "Ne aramıştınız?";
+            }
+        }
+
+        function AraTemizle(obj) {
+            if (obj.valueOf != "") {
+                obj.value = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <div class="logo">
+                <a href="/default.aspx">
+                    <img src="/App_Themes/MainTheme/Images/logo.png" alt="Kurumsal İletişim Portalı"
+                        width="367" height="66" /></a>
+            </div>
+            <div class="googlearama">
+                <img style="vertical-align: middle" src="/App_Themes/MainTheme/Images/google.png"
+                    alt="Google" />&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBoxArama" runat="server" MaxLength="275" Width="275px" onclick="AraTemizle(this);"
+                        onmouseout="AraYaz(this);"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Gerekli"
+                    ValidationGroup="Arama" Display="None" ControlToValidate="TextBoxArama" InitialValue="Ne aramıştınız?"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Gerekli"
+                    ValidationGroup="Arama" Display="None" ControlToValidate="TextBoxArama"></asp:RequiredFieldValidator>
+                <div style="padding: 5px 0 0 0; text-align: right;">
+                    <asp:Button ID="ButtonGoogledaAra" runat="server" Text="Google'da Ara" OnClick="ButtonGoogledaAraClick"
+                        CssClass="button" OnClientClick="form1.target='_blank';" ValidationGroup="Arama" />
+                    <asp:Button ID="ButtonSiteIcindeAra" runat="server" Text="Site içinde Ara" OnClick="ButtonSiteIcindeAraClick"
+                        OnClientClick="form1.target='_self';" CssClass="button" ValidationGroup="Arama" />
+                </div>
+            </div>
+            <div class="giris">
+                <div class="hosgeldiniz">
+                    <asp:Literal ID="ltHosgeldiniz" runat="server" Text="" runat="server" />
+                </div>
+                <div class="ayarlar">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="width: 100%; text-align: right;">
+                                <uc3:UstMenuKontrol ID="UstMenuKontrol1" runat="server" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="menuback">
+        </div>
+        <div class="menu">
+            <div class="baslik">
+                MENÜ
+            </div>
+            <table cellpadding="0" cellspacing="0" style="width: 200px;">
+                <tr>
+                    <td>
+                        <uc1:KullaniciMenusuKontrol ID="KullaniciMenusuKontrol1" runat="server" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #bbbbbb; height: 1px;"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <uc2:PortalMenusuKontrol ID="PortalMenusuKontrol1" runat="server" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="social">
+                            <span style="float: left; margin-right: 10px;"><a href="http://www.facebook.com"
+                                target="_new">
+                                <img alt="facebook" src="/App_Themes/MainTheme/Images/facebook.png" /></a> <a href="http://twitter.com"
+                                    target="_new">
+                                    <img alt="twitter" src="/App_Themes/MainTheme/Images/twitter.png" /></a></span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <table cellpadding="0" cellspacing="0" class="content">
+            <tr>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <div class="footer">
+                        <asp:Label ID="LabelSiteBilgileriFooter" runat="server" Text=""></asp:Label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

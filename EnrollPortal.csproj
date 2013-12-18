@@ -1,0 +1,1146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{290AB93D-CF31-4F0A-BD1E-8DFBC2DA1164}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EnrollPortal</RootNamespace>
+    <AssemblyName>EnrollPortal</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.51116.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Telerik.Web.UI, Version=2013.1.417.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>distributions\RadControls for ASP.NET AJAX\2013.1.417.40\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\AnketKontrol.aspx" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\DuyuruKategorileriKontrol.aspx" />
+    <Content Include="Admin\DuyurularKontrol.aspx" />
+    <Content Include="Admin\EgitimlerKontrol.aspx" />
+    <Content Include="Admin\EnrollDestek.aspx" />
+    <Content Include="Admin\EtkinlikKategorileriKontrol.aspx" />
+    <Content Include="Admin\EtkinliklerKontrol.aspx" />
+    <Content Include="Admin\FileManager.aspx" />
+    <Content Include="Admin\ForumKategorileriKontrol.aspx" />
+    <Content Include="Admin\ForumKonulariKontrol.aspx" />
+    <Content Include="Admin\FotoAlbumGorselleriKontrol.aspx" />
+    <Content Include="Admin\FotoAlbumKategorileriKontrol.aspx" />
+    <Content Include="Admin\FotoAlbumlerKontrol.aspx" />
+    <Content Include="Admin\HaberKategorileriKontrol.aspx" />
+    <Content Include="Admin\HaberlerKontrol.aspx" />
+    <Content Include="Admin\IlanKategorileriKontrol.aspx" />
+    <Content Include="Admin\IlanlarKontrol.aspx" />
+    <Content Include="Admin\Kontroller\AnketKontrol.ascx" />
+    <Content Include="Admin\Kontroller\DillerKontrol.ascx" />
+    <Content Include="Admin\Kontroller\DuyuruKategorileriKontrol.ascx" />
+    <Content Include="Admin\Kontroller\DuyurularKontrol.ascx" />
+    <Content Include="Admin\Kontroller\EgitimlerKontrol.ascx" />
+    <Content Include="Admin\Kontroller\EnrollDestek.ascx" />
+    <Content Include="Admin\Kontroller\EtkinlikKategorileriKontrol.ascx" />
+    <Content Include="Admin\Kontroller\EtkinliklerKontrol.ascx" />
+    <Content Include="Admin\Kontroller\ForumKategorileriKontrol.ascx" />
+    <Content Include="Admin\Kontroller\ForumKonulariKontrol.ascx" />
+    <Content Include="Admin\Kontroller\FotoAlbumGorselleriKontrol.ascx" />
+    <Content Include="Admin\Kontroller\FotoAlbumKategorileriKontrol.ascx" />
+    <Content Include="Admin\Kontroller\FotoAlbumlerKontrol.ascx" />
+    <Content Include="Admin\Kontroller\HaberKategorileriKontrol.ascx" />
+    <Content Include="Admin\Kontroller\HaberlerKontrol.ascx" />
+    <Content Include="Admin\Kontroller\IlanKategorileriKontrol.ascx" />
+    <Content Include="Admin\Kontroller\IlanlarKontrol.ascx" />
+    <Content Include="Admin\Kontroller\MenulerKontrol.ascx" />
+    <Content Include="Admin\Kontroller\MesajKontrol.ascx" />
+    <Content Include="Admin\Kontroller\PersonelDuyuruKategorileriKontrol.ascx" />
+    <Content Include="Admin\Kontroller\PersonelDuyurularKontrol.ascx" />
+    <Content Include="Admin\Kontroller\RollerKontrol.ascx" />
+    <Content Include="Admin\Kontroller\SiteBilgileriKontrol.ascx" />
+    <Content Include="Admin\MenulerKontrol.aspx" />
+    <Content Include="Admin\PersonelDuyuruKategorileriKontrol.aspx" />
+    <Content Include="Admin\PersonelDuyurularKontrol.aspx" />
+    <Content Include="Admin\RollerKontrol.aspx" />
+    <Content Include="Admin\SiteBilgileriKontrol.aspx" />
+    <Content Include="Admin\Theme\Images\admin_login.png" />
+    <Content Include="Admin\Theme\Images\alt.png" />
+    <Content Include="Admin\Theme\Images\ara.png" />
+    <Content Include="Admin\Theme\Images\back.jpg" />
+    <Content Include="Admin\Theme\Images\blank.gif" />
+    <Content Include="Admin\Theme\Images\degistir.png" />
+    <Content Include="Admin\Theme\Images\duzenle.png" />
+    <Content Include="Admin\Theme\Images\ekle.png" />
+    <Content Include="Admin\Theme\Images\en.png" />
+    <Content Include="Admin\Theme\Images\enroll.png" />
+    <Content Include="Admin\Theme\Images\false.jpg" />
+    <Content Include="Admin\Theme\Images\folder.png" />
+    <Content Include="Admin\Theme\Images\home.png" />
+    <Content Include="Admin\Theme\Images\icon\arti.png" />
+    <Content Include="Admin\Theme\Images\icon\ayarlarim.png" />
+    <Content Include="Admin\Theme\Images\icon\cikis.png" />
+    <Content Include="Admin\Theme\Images\icon\cop.png" />
+    <Content Include="Admin\Theme\Images\icon\destek.png" />
+    <Content Include="Admin\Theme\Images\icon\dokuman_yukle_label.png" />
+    <Content Include="Admin\Theme\Images\icon\edit.png" />
+    <Content Include="Admin\Theme\Images\icon\eksi.png" />
+    <Content Include="Admin\Theme\Images\icon\giris.png" />
+    <Content Include="Admin\Theme\Images\icon\imaj_yukle.png" />
+    <Content Include="Admin\Theme\Images\icon\imaj_yukle_label.png" />
+    <Content Include="Admin\Theme\Images\icon\sayfa_sil.png" />
+    <Content Include="Admin\Theme\Images\icon\sayfa_sil_label.png" />
+    <Content Include="Admin\Theme\Images\icon\site.png" />
+    <Content Include="Admin\Theme\Images\icon\yardim.png" />
+    <Content Include="Admin\Theme\Images\icon\yeni_ekle.png" />
+    <Content Include="Admin\Theme\Images\icon\yeni_ekle_label.png" />
+    <Content Include="Admin\Theme\Images\icon\yeni_klasor.png" />
+    <Content Include="Admin\Theme\Images\icon\zoom.png" />
+    <Content Include="Admin\Theme\Images\iptal.png" />
+    <Content Include="Admin\Theme\Images\kapat.png" />
+    <Content Include="Admin\Theme\Images\kaydet.png" />
+    <Content Include="Admin\Theme\Images\leftbottom.png" />
+    <Content Include="Admin\Theme\Images\leftmed.png" />
+    <Content Include="Admin\Theme\Images\lefttop.png" />
+    <Content Include="Admin\Theme\Images\login.png" />
+    <Content Include="Admin\Theme\Images\menuicon\anket.png" />
+    <Content Include="Admin\Theme\Images\menuicon\canli.png" />
+    <Content Include="Admin\Theme\Images\menuicon\cenaze.png" />
+    <Content Include="Admin\Theme\Images\menuicon\dokuman.png" />
+    <Content Include="Admin\Theme\Images\menuicon\duyuru.png" />
+    <Content Include="Admin\Theme\Images\menuicon\eposta.png" />
+    <Content Include="Admin\Theme\Images\menuicon\etkinlik.png" />
+    <Content Include="Admin\Theme\Images\menuicon\foto.png" />
+    <Content Include="Admin\Theme\Images\menuicon\haber.png" />
+    <Content Include="Admin\Theme\Images\menuicon\habergrubu.png" />
+    <Content Include="Admin\Theme\Images\menuicon\ihale.png" />
+    <Content Include="Admin\Theme\Images\menuicon\kullanici.png" />
+    <Content Include="Admin\Theme\Images\menuicon\menu.png" />
+    <Content Include="Admin\Theme\Images\menuicon\sitebilgi.png" />
+    <Content Include="Admin\Theme\Images\menuicon\slider.png" />
+    <Content Include="Admin\Theme\Images\menuicon\sss.png" />
+    <Content Include="Admin\Theme\Images\menuicon\video.png" />
+    <Content Include="Admin\Theme\Images\musterilogo.png" />
+    <Content Include="Admin\Theme\Images\rightbottom.png" />
+    <Content Include="Admin\Theme\Images\rightmed.png" />
+    <Content Include="Admin\Theme\Images\righttop.png" />
+    <Content Include="Admin\Theme\Images\sil.png" />
+    <Content Include="Admin\Theme\Images\submit.png" />
+    <Content Include="Admin\Theme\Images\tepe.png" />
+    <Content Include="Admin\Theme\Images\tr.png" />
+    <Content Include="Admin\Theme\Images\true.jpg" />
+    <Content Include="Admin\Theme\Images\uyari.png" />
+    <Content Include="Admin\Theme\Images\yukle.png" />
+    <Content Include="Admin\Theme\Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Admin\Theme\Styles\Admin.css" />
+    <Content Include="Admin\Theme\Styles\AdminKontroller.css" />
+    <Content Include="Admin\Theme\Styles\AdminSub.css" />
+    <Content Include="Admin\Theme\VideoPlayer\jwplayer.js" />
+    <Content Include="Admin\Theme\VideoPlayer\player.swf" />
+    <Content Include="App_Themes\MainTheme\Images\admin_login.png" />
+    <Content Include="App_Themes\MainTheme\Images\back.jpg" />
+    <Content Include="App_Themes\MainTheme\Images\back.png" />
+    <Content Include="App_Themes\MainTheme\Images\back_login.jpg" />
+    <Content Include="App_Themes\MainTheme\Images\cikis.png" />
+    <Content Include="App_Themes\MainTheme\Images\facebook.png" />
+    <Content Include="App_Themes\MainTheme\Images\false.jpg" />
+    <Content Include="App_Themes\MainTheme\Images\Galeri\default_thumb.png" />
+    <Content Include="App_Themes\MainTheme\Images\Galeri\loader.gif" />
+    <Content Include="App_Themes\MainTheme\Images\Galeri\sprite.png" />
+    <Content Include="App_Themes\MainTheme\Images\Galeri\sprite_next.png" />
+    <Content Include="App_Themes\MainTheme\Images\Galeri\sprite_prev.png" />
+    <Content Include="App_Themes\MainTheme\Images\Galeri\sprite_x.png" />
+    <Content Include="App_Themes\MainTheme\Images\Galeri\sprite_y.png" />
+    <Content Include="App_Themes\MainTheme\Images\google.png" />
+    <Content Include="App_Themes\MainTheme\Images\ikonlar\album.png" />
+    <Content Include="App_Themes\MainTheme\Images\ikonlar\canli.png" />
+    <Content Include="App_Themes\MainTheme\Images\ikonlar\dokuman.png" />
+    <Content Include="App_Themes\MainTheme\Images\ikonlar\duyuru.png" />
+    <Content Include="App_Themes\MainTheme\Images\ikonlar\etkinlik.png" />
+    <Content Include="App_Themes\MainTheme\Images\ikonlar\haber.png" />
+    <Content Include="App_Themes\MainTheme\Images\ikonlar\ihale.png" />
+    <Content Include="App_Themes\MainTheme\Images\ikonlar\video.png" />
+    <Content Include="App_Themes\MainTheme\Images\login.png" />
+    <Content Include="App_Themes\MainTheme\Images\logo.png" />
+    <Content Include="App_Themes\MainTheme\Images\logosmall.png" />
+    <Content Include="App_Themes\MainTheme\Images\mesaj.png" />
+    <Content Include="App_Themes\MainTheme\Images\mesajagit.png" />
+    <Content Include="App_Themes\MainTheme\Images\mesajvar.png" />
+    <Content Include="App_Themes\MainTheme\Images\noimage.png" />
+    <Content Include="App_Themes\MainTheme\Images\remind.png" />
+    <Content Include="App_Themes\MainTheme\Images\rss.png" />
+    <Content Include="App_Themes\MainTheme\Images\submit.png" />
+    <Content Include="App_Themes\MainTheme\Images\tableback.png" />
+    <Content Include="App_Themes\MainTheme\Images\true.jpg" />
+    <Content Include="App_Themes\MainTheme\Images\twitter.png" />
+    <Content Include="App_Themes\MainTheme\Images\uyari.png" />
+    <Content Include="App_Themes\MainTheme\Scripts\jquery.min.js" />
+    <Content Include="App_Themes\MainTheme\Scripts\jquery.prettyPhoto.js" />
+    <Content Include="App_Themes\MainTheme\Styles\Giris.css" />
+    <Content Include="App_Themes\MainTheme\Styles\Manset.css" />
+    <Content Include="App_Themes\MainTheme\Styles\Portal.css" />
+    <Content Include="App_Themes\MainTheme\Styles\prettyPhoto.css" />
+    <Content Include="Ara.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="EtkinlikDetay.aspx" />
+    <Content Include="EtkinliklerManset.aspx" />
+    <Content Include="Forumlar.aspx" />
+    <Content Include="ForumMesajlariKontrol.aspx" />
+    <Content Include="FotoAlbumDetay.aspx" />
+    <Content Include="Giris\Cikis.aspx" />
+    <Content Include="Giris\Giris.aspx" />
+    <Content Include="HaberlerVeDuyurularManset.aspx" />
+    <Content Include="HaberVeDuyuruDetay.aspx" />
+    <Content Include="IlanlarVeDuyurularManset.aspx" />
+    <Content Include="IlanVeDuyuruDetay.aspx" />
+    <Content Include="Kontroller\AlbumlerKontrol.ascx" />
+    <Content Include="Kontroller\AramaKontrol.ascx" />
+    <Content Include="Kontroller\EgitimlerKontrol.ascx" />
+    <Content Include="Kontroller\ForumKategorilerKontrol.ascx" />
+    <Content Include="Kontroller\ForumKonuDetayKontrol.ascx" />
+    <Content Include="Kontroller\ForumKonulariKontrol.ascx" />
+    <Content Include="Kontroller\ForumMesajlariKontrol.ascx" />
+    <Content Include="Kontroller\IcerikDetayKontrol.ascx" />
+    <Content Include="Kontroller\IlanlarVeDuyurularKontrol.ascx" />
+    <Content Include="Kontroller\IletisimFormuKontrol.ascx" />
+    <Content Include="Kontroller\KullaniciMesajlariKontrol.ascx" />
+    <Content Include="Kontroller\PortalRssListKontrol.ascx" />
+    <Content Include="Kontroller\TumEgitimlerKontrol.ascx" />
+    <Content Include="Kontroller\EtkinlikDetayKontrol.ascx" />
+    <Content Include="Kontroller\EtkinliklerListKontrol.ascx" />
+    <Content Include="Kontroller\FotoAlbumDetayKontrol.ascx" />
+    <Content Include="Kontroller\FotoAlbumlerListKontrol.ascx" />
+    <Content Include="Kontroller\HaberVeDuyuruDetayKontrol.ascx" />
+    <Content Include="Kontroller\HaberlerVeDuyurularListKontrol.ascx" />
+    <Content Include="Kontroller\IlanlarVeDuyurularListKontrol.ascx" />
+    <Content Include="Kontroller\IlanVeDuyuruDetayKontrol.ascx" />
+    <Content Include="Kontroller\KullaniciMenusuKontrol.ascx" />
+    <Content Include="Kontroller\MesajKontrol.ascx" />
+    <Content Include="Kontroller\PortalMenusuKontrol.ascx" />
+    <Content Include="Kontroller\TumEtkinliklerKontrol.ascx" />
+    <Content Include="Kontroller\TumHaberlerVeDuyurularKontrol.ascx" />
+    <Content Include="Kontroller\TumIlanlarVeDuyurularKontrol.ascx" />
+    <Content Include="Kontroller\UstMenuKontrol.ascx" />
+    <Content Include="Kutuphaneler\RadEditorTolls.xml" />
+    <Content Include="Kutuphaneler\WebServicePersonelAra.asmx" />
+    <Content Include="MailTemplates\enrolldestek.htm" />
+    <Content Include="MailTemplates\iletisim.htm" />
+    <Content Include="obj\Debug\EnrollPortal.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\EnrollPortal.dll" />
+    <Content Include="obj\Debug\EnrollPortal.pdb" />
+    <Content Include="obj\Debug\TempPE\DataModels.EnrollPortalModel.Designer.cs.dll" />
+    <Content Include="Portal\AlbumListeleri.aspx" />
+    <Content Include="Portal\EgitimListeleri.aspx" />
+    <Content Include="Portal\ForumDetay.aspx" />
+    <Content Include="Portal\ForumKonuEkle.aspx" />
+    <Content Include="Portal\IlanVeDuyuruListeleri.aspx" />
+    <Content Include="Portal\Iletisim.aspx" />
+    <Content Include="Portal\Mesajlar.aspx" />
+    <Content Include="robots.txt" />
+    <Content Include="Global.asax" />
+    <Content Include="Sayfa.aspx" />
+    <Content Include="SonGelismeler.aspx" />
+    <Content Include="Test.aspx" />
+    <Content Include="TumEgitimler.aspx" />
+    <Content Include="TumEtkinlikler.aspx" />
+    <Content Include="TumFotoAlbumler.aspx" />
+    <Content Include="TumHaberlerVeDuyurular.aspx" />
+    <Content Include="TumIlanlarVeDuyurular.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebServices\EventsActions.asmx" />
+    <Content Include="WebServices\MessageActions.asmx" />
+    <Content Include="WebServices\PhotoAlbum.asmx" />
+    <Content Include="WebServices\IlanHaberDuyuru.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminSub.Master.cs">
+      <DependentUpon>AdminSub.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminSub.Master.designer.cs">
+      <DependentUpon>AdminSub.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AnketKontrol.aspx.cs">
+      <DependentUpon>AnketKontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AnketKontrol.aspx.designer.cs">
+      <DependentUpon>AnketKontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DuyuruKategorileriKontrol.aspx.cs">
+      <DependentUpon>DuyuruKategorileriKontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DuyuruKategorileriKontrol.aspx.designer.cs">
+      <DependentUpon>DuyuruKategorileriKontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DuyurularKontrol.aspx.cs">
+      <DependentUpon>DuyurularKontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DuyurularKontrol.aspx.designer.cs">
+      <DependentUpon>DuyurularKontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EgitimlerKontrol.aspx.cs">
+      <DependentUpon>EgitimlerKontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EgitimlerKontrol.aspx.designer.cs">
+      <DependentUpon>EgitimlerKontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EnrollDestek.aspx.cs">
+      <DependentUpon>EnrollDestek.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EnrollDestek.aspx.designer.cs">
+      <DependentUpon>EnrollDestek.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EtkinlikKategorileriKontrol.aspx.cs">
+      <DependentUpon>EtkinlikKategorileriKontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EtkinlikKategorileriKontrol.aspx.designer.cs">
+      <DependentUpon>EtkinlikKategorileriKontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EtkinliklerKontrol.aspx.cs">
+      <DependentUpon>EtkinliklerKontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EtkinliklerKontrol.aspx.designer.cs">
+      <DependentUpon>EtkinliklerKontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FileManager.aspx.cs">
+      <DependentUpon>FileManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FileManager.aspx.designer.cs">
+      <DependentUpon>FileManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ForumKategorileriKontrol.aspx.cs">
+      <DependentUpon>ForumKategorileriKontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ForumKategorileriKontrol.aspx.designer.cs">
+      <DependentUpon>ForumKategorileriKontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ForumKonulariKontrol.aspx.cs">
+      <DependentUpon>ForumKonulariKontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ForumKonulariKontrol.aspx.designer.cs">
+      <DependentUpon>ForumKonulariKontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FotoAlbumGorselleriKontrol.aspx.cs">
+      <DependentUpon>FotoAlbumGorselleriKontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FotoAlbumGorselleriKontrol.aspx.designer.cs">
+      <DependentUpon>FotoAlbumGorselleriKontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FotoAlbumKategorileriKontrol.aspx.cs">
+      <DependentUpon>FotoAlbumKategorileriKontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FotoAlbumKategorileriKontrol.aspx.designer.cs">
+      <DependentUpon>FotoAlbumKategorileriKontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FotoAlbumlerKontrol.aspx.cs">
+      <DependentUpon>FotoAlbumlerKontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FotoAlbumlerKontrol.aspx.designer.cs">
+      <DependentUpon>FotoAlbumlerKontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HaberKategorileriKontrol.aspx.cs">
+      <DependentUpon>HaberKategorileriKontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HaberKategorileriKontrol.aspx.designer.cs">
+      <DependentUpon>HaberKategorileriKontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HaberlerKontrol.aspx.cs">
+      <DependentUpon>HaberlerKontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HaberlerKontrol.aspx.designer.cs">
+      <DependentUpon>HaberlerKontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\IlanKategorileriKontrol.aspx.cs">
+      <DependentUpon>IlanKategorileriKontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\IlanKategorileriKontrol.aspx.designer.cs">
+      <DependentUpon>IlanKategorileriKontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\IlanlarKontrol.aspx.cs">
+      <DependentUpon>IlanlarKontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\IlanlarKontrol.aspx.designer.cs">
+      <DependentUpon>IlanlarKontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\AnketKontrol.ascx.cs">
+      <DependentUpon>AnketKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\AnketKontrol.ascx.designer.cs">
+      <DependentUpon>AnketKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\DillerKontrol.ascx.cs">
+      <DependentUpon>DillerKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\DillerKontrol.ascx.designer.cs">
+      <DependentUpon>DillerKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\DuyuruKategorileriKontrol.ascx.cs">
+      <DependentUpon>DuyuruKategorileriKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\DuyuruKategorileriKontrol.ascx.designer.cs">
+      <DependentUpon>DuyuruKategorileriKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\DuyurularKontrol.ascx.cs">
+      <DependentUpon>DuyurularKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\DuyurularKontrol.ascx.designer.cs">
+      <DependentUpon>DuyurularKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\EgitimlerKontrol.ascx.cs">
+      <DependentUpon>EgitimlerKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\EgitimlerKontrol.ascx.designer.cs">
+      <DependentUpon>EgitimlerKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\EnrollDestek.ascx.cs">
+      <DependentUpon>EnrollDestek.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\EnrollDestek.ascx.designer.cs">
+      <DependentUpon>EnrollDestek.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\EtkinlikKategorileriKontrol.ascx.cs">
+      <DependentUpon>EtkinlikKategorileriKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\EtkinlikKategorileriKontrol.ascx.designer.cs">
+      <DependentUpon>EtkinlikKategorileriKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\EtkinliklerKontrol.ascx.cs">
+      <DependentUpon>EtkinliklerKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\EtkinliklerKontrol.ascx.designer.cs">
+      <DependentUpon>EtkinliklerKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\ForumKategorileriKontrol.ascx.cs">
+      <DependentUpon>ForumKategorileriKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\ForumKategorileriKontrol.ascx.designer.cs">
+      <DependentUpon>ForumKategorileriKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\ForumKonulariKontrol.ascx.cs">
+      <DependentUpon>ForumKonulariKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\ForumKonulariKontrol.ascx.designer.cs">
+      <DependentUpon>ForumKonulariKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\FotoAlbumGorselleriKontrol.ascx.cs">
+      <DependentUpon>FotoAlbumGorselleriKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\FotoAlbumGorselleriKontrol.ascx.designer.cs">
+      <DependentUpon>FotoAlbumGorselleriKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\FotoAlbumKategorileriKontrol.ascx.cs">
+      <DependentUpon>FotoAlbumKategorileriKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\FotoAlbumKategorileriKontrol.ascx.designer.cs">
+      <DependentUpon>FotoAlbumKategorileriKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\FotoAlbumlerKontrol.ascx.cs">
+      <DependentUpon>FotoAlbumlerKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\FotoAlbumlerKontrol.ascx.designer.cs">
+      <DependentUpon>FotoAlbumlerKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\HaberKategorileriKontrol.ascx.cs">
+      <DependentUpon>HaberKategorileriKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\HaberKategorileriKontrol.ascx.designer.cs">
+      <DependentUpon>HaberKategorileriKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\HaberlerKontrol.ascx.cs">
+      <DependentUpon>HaberlerKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\HaberlerKontrol.ascx.designer.cs">
+      <DependentUpon>HaberlerKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\IlanKategorileriKontrol.ascx.cs">
+      <DependentUpon>IlanKategorileriKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\IlanKategorileriKontrol.ascx.designer.cs">
+      <DependentUpon>IlanKategorileriKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\IlanlarKontrol.ascx.cs">
+      <DependentUpon>IlanlarKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\IlanlarKontrol.ascx.designer.cs">
+      <DependentUpon>IlanlarKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\MenulerKontrol.ascx.cs">
+      <DependentUpon>MenulerKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\MenulerKontrol.ascx.designer.cs">
+      <DependentUpon>MenulerKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\MesajKontrol.ascx.cs">
+      <DependentUpon>MesajKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\MesajKontrol.ascx.designer.cs">
+      <DependentUpon>MesajKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\PersonelDuyuruKategorileriKontrol.ascx.cs">
+      <DependentUpon>PersonelDuyuruKategorileriKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\PersonelDuyuruKategorileriKontrol.ascx.designer.cs">
+      <DependentUpon>PersonelDuyuruKategorileriKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\PersonelDuyurularKontrol.ascx.cs">
+      <DependentUpon>PersonelDuyurularKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\PersonelDuyurularKontrol.ascx.designer.cs">
+      <DependentUpon>PersonelDuyurularKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\RollerKontrol.ascx.cs">
+      <DependentUpon>RollerKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\RollerKontrol.ascx.designer.cs">
+      <DependentUpon>RollerKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kontroller\SiteBilgileriKontrol.ascx.cs">
+      <DependentUpon>SiteBilgileriKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kontroller\SiteBilgileriKontrol.ascx.designer.cs">
+      <DependentUpon>SiteBilgileriKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MenulerKontrol.aspx.cs">
+      <DependentUpon>MenulerKontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MenulerKontrol.aspx.designer.cs">
+      <DependentUpon>MenulerKontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PersonelDuyuruKategorileriKontrol.aspx.cs">
+      <DependentUpon>PersonelDuyuruKategorileriKontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PersonelDuyuruKategorileriKontrol.aspx.designer.cs">
+      <DependentUpon>PersonelDuyuruKategorileriKontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PersonelDuyurularKontrol.aspx.cs">
+      <DependentUpon>PersonelDuyurularKontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PersonelDuyurularKontrol.aspx.designer.cs">
+      <DependentUpon>PersonelDuyurularKontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RollerKontrol.aspx.cs">
+      <DependentUpon>RollerKontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\RollerKontrol.aspx.designer.cs">
+      <DependentUpon>RollerKontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SiteBilgileriKontrol.aspx.cs">
+      <DependentUpon>SiteBilgileriKontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SiteBilgileriKontrol.aspx.designer.cs">
+      <DependentUpon>SiteBilgileriKontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ara.aspx.cs">
+      <DependentUpon>Ara.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ara.aspx.designer.cs">
+      <DependentUpon>Ara.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EtkinlikDetay.aspx.cs">
+      <DependentUpon>EtkinlikDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EtkinlikDetay.aspx.designer.cs">
+      <DependentUpon>EtkinlikDetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EtkinliklerManset.aspx.cs">
+      <DependentUpon>EtkinliklerManset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EtkinliklerManset.aspx.designer.cs">
+      <DependentUpon>EtkinliklerManset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forumlar.aspx.cs">
+      <DependentUpon>Forumlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forumlar.aspx.designer.cs">
+      <DependentUpon>Forumlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForumMesajlariKontrol.aspx.cs">
+      <DependentUpon>ForumMesajlariKontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForumMesajlariKontrol.aspx.designer.cs">
+      <DependentUpon>ForumMesajlariKontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FotoAlbumDetay.aspx.cs">
+      <DependentUpon>FotoAlbumDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FotoAlbumDetay.aspx.designer.cs">
+      <DependentUpon>FotoAlbumDetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Giris\Cikis.aspx.cs">
+      <DependentUpon>Cikis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Giris\Cikis.aspx.designer.cs">
+      <DependentUpon>Cikis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Giris\Giris.aspx.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Giris\Giris.aspx.designer.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HaberlerVeDuyurularManset.aspx.cs">
+      <DependentUpon>HaberlerVeDuyurularManset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HaberlerVeDuyurularManset.aspx.designer.cs">
+      <DependentUpon>HaberlerVeDuyurularManset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HaberVeDuyuruDetay.aspx.cs">
+      <DependentUpon>HaberVeDuyuruDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HaberVeDuyuruDetay.aspx.designer.cs">
+      <DependentUpon>HaberVeDuyuruDetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IlanlarVeDuyurularManset.aspx.cs">
+      <DependentUpon>IlanlarVeDuyurularManset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IlanlarVeDuyurularManset.aspx.designer.cs">
+      <DependentUpon>IlanlarVeDuyurularManset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IlanVeDuyuruDetay.aspx.cs">
+      <DependentUpon>IlanVeDuyuruDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IlanVeDuyuruDetay.aspx.designer.cs">
+      <DependentUpon>IlanVeDuyuruDetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\AlbumlerKontrol.ascx.cs">
+      <DependentUpon>AlbumlerKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\AlbumlerKontrol.ascx.designer.cs">
+      <DependentUpon>AlbumlerKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\AramaKontrol.ascx.cs">
+      <DependentUpon>AramaKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\AramaKontrol.ascx.designer.cs">
+      <DependentUpon>AramaKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\EgitimlerKontrol.ascx.cs">
+      <DependentUpon>EgitimlerKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\EgitimlerKontrol.ascx.designer.cs">
+      <DependentUpon>EgitimlerKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\ForumKategorilerKontrol.ascx.cs">
+      <DependentUpon>ForumKategorilerKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\ForumKategorilerKontrol.ascx.designer.cs">
+      <DependentUpon>ForumKategorilerKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\ForumKonuDetayKontrol.ascx.cs">
+      <DependentUpon>ForumKonuDetayKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\ForumKonuDetayKontrol.ascx.designer.cs">
+      <DependentUpon>ForumKonuDetayKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\ForumKonulariKontrol.ascx.cs">
+      <DependentUpon>ForumKonulariKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\ForumKonulariKontrol.ascx.designer.cs">
+      <DependentUpon>ForumKonulariKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\ForumMesajlariKontrol.ascx.cs">
+      <DependentUpon>ForumMesajlariKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\ForumMesajlariKontrol.ascx.designer.cs">
+      <DependentUpon>ForumMesajlariKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\IcerikDetayKontrol.ascx.cs">
+      <DependentUpon>IcerikDetayKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\IcerikDetayKontrol.ascx.designer.cs">
+      <DependentUpon>IcerikDetayKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\IlanlarVeDuyurularKontrol.ascx.cs">
+      <DependentUpon>IlanlarVeDuyurularKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\IlanlarVeDuyurularKontrol.ascx.designer.cs">
+      <DependentUpon>IlanlarVeDuyurularKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\IletisimFormuKontrol.ascx.cs">
+      <DependentUpon>IletisimFormuKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\IletisimFormuKontrol.ascx.designer.cs">
+      <DependentUpon>IletisimFormuKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\KullaniciMesajlariKontrol.ascx.cs">
+      <DependentUpon>KullaniciMesajlariKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\KullaniciMesajlariKontrol.ascx.designer.cs">
+      <DependentUpon>KullaniciMesajlariKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\PortalRssListKontrol.ascx.cs">
+      <DependentUpon>PortalRssListKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\PortalRssListKontrol.ascx.designer.cs">
+      <DependentUpon>PortalRssListKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\TumEgitimlerKontrol.ascx.cs">
+      <DependentUpon>TumEgitimlerKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\TumEgitimlerKontrol.ascx.designer.cs">
+      <DependentUpon>TumEgitimlerKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\EtkinlikDetayKontrol.ascx.cs">
+      <DependentUpon>EtkinlikDetayKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\EtkinlikDetayKontrol.ascx.designer.cs">
+      <DependentUpon>EtkinlikDetayKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\EtkinliklerListKontrol.ascx.cs">
+      <DependentUpon>EtkinliklerListKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\EtkinliklerListKontrol.ascx.designer.cs">
+      <DependentUpon>EtkinliklerListKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\FotoAlbumDetayKontrol.ascx.cs">
+      <DependentUpon>FotoAlbumDetayKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\FotoAlbumDetayKontrol.ascx.designer.cs">
+      <DependentUpon>FotoAlbumDetayKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\FotoAlbumlerListKontrol.ascx.cs">
+      <DependentUpon>FotoAlbumlerListKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\FotoAlbumlerListKontrol.ascx.designer.cs">
+      <DependentUpon>FotoAlbumlerListKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\HaberVeDuyuruDetayKontrol.ascx.cs">
+      <DependentUpon>HaberVeDuyuruDetayKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\HaberVeDuyuruDetayKontrol.ascx.designer.cs">
+      <DependentUpon>HaberVeDuyuruDetayKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\HaberlerVeDuyurularListKontrol.ascx.cs">
+      <DependentUpon>HaberlerVeDuyurularListKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\HaberlerVeDuyurularListKontrol.ascx.designer.cs">
+      <DependentUpon>HaberlerVeDuyurularListKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\IlanlarVeDuyurularListKontrol.ascx.cs">
+      <DependentUpon>IlanlarVeDuyurularListKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\IlanlarVeDuyurularListKontrol.ascx.designer.cs">
+      <DependentUpon>IlanlarVeDuyurularListKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\IlanVeDuyuruDetayKontrol.ascx.cs">
+      <DependentUpon>IlanVeDuyuruDetayKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\IlanVeDuyuruDetayKontrol.ascx.designer.cs">
+      <DependentUpon>IlanVeDuyuruDetayKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\KullaniciMenusuKontrol.ascx.cs">
+      <DependentUpon>KullaniciMenusuKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\KullaniciMenusuKontrol.ascx.designer.cs">
+      <DependentUpon>KullaniciMenusuKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\MesajKontrol.ascx.cs">
+      <DependentUpon>MesajKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\MesajKontrol.ascx.designer.cs">
+      <DependentUpon>MesajKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\PortalMenusuKontrol.ascx.cs">
+      <DependentUpon>PortalMenusuKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\PortalMenusuKontrol.ascx.designer.cs">
+      <DependentUpon>PortalMenusuKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\TumEtkinliklerKontrol.ascx.cs">
+      <DependentUpon>TumEtkinliklerKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\TumEtkinliklerKontrol.ascx.designer.cs">
+      <DependentUpon>TumEtkinliklerKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\TumHaberlerVeDuyurularKontrol.ascx.cs">
+      <DependentUpon>TumHaberlerVeDuyurularKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\TumHaberlerVeDuyurularKontrol.ascx.designer.cs">
+      <DependentUpon>TumHaberlerVeDuyurularKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\TumIlanlarVeDuyurularKontrol.ascx.cs">
+      <DependentUpon>TumIlanlarVeDuyurularKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\TumIlanlarVeDuyurularKontrol.ascx.designer.cs">
+      <DependentUpon>TumIlanlarVeDuyurularKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\UstMenuKontrol.ascx.cs">
+      <DependentUpon>UstMenuKontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontroller\UstMenuKontrol.ascx.designer.cs">
+      <DependentUpon>UstMenuKontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kutuphaneler\DataModels\EnrollPortalModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnrollPortalModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Kutuphaneler\Enroll.cs" />
+    <Compile Include="Kutuphaneler\EnrollArama.cs" />
+    <Compile Include="Kutuphaneler\EnrollContext.cs" />
+    <Compile Include="Kutuphaneler\EnrollExceptionManager.cs" />
+    <Compile Include="Kutuphaneler\MansetListeleri.cs" />
+    <Compile Include="Kutuphaneler\WebServicePersonelAra.asmx.cs">
+      <DependentUpon>WebServicePersonelAra.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Master.Master.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master.Master.designer.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\AlbumListeleri.aspx.cs">
+      <DependentUpon>AlbumListeleri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\AlbumListeleri.aspx.designer.cs">
+      <DependentUpon>AlbumListeleri.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\EgitimListeleri.aspx.cs">
+      <DependentUpon>EgitimListeleri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\EgitimListeleri.aspx.designer.cs">
+      <DependentUpon>EgitimListeleri.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\ForumDetay.aspx.cs">
+      <DependentUpon>ForumDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\ForumDetay.aspx.designer.cs">
+      <DependentUpon>ForumDetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\ForumKonuEkle.aspx.cs">
+      <DependentUpon>ForumKonuEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\ForumKonuEkle.aspx.designer.cs">
+      <DependentUpon>ForumKonuEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\IlanVeDuyuruListeleri.aspx.cs">
+      <DependentUpon>IlanVeDuyuruListeleri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\IlanVeDuyuruListeleri.aspx.designer.cs">
+      <DependentUpon>IlanVeDuyuruListeleri.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\Iletisim.aspx.cs">
+      <DependentUpon>Iletisim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\Iletisim.aspx.designer.cs">
+      <DependentUpon>Iletisim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\Mesajlar.aspx.cs">
+      <DependentUpon>Mesajlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\Mesajlar.aspx.designer.cs">
+      <DependentUpon>Mesajlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sayfa.aspx.cs">
+      <DependentUpon>Sayfa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sayfa.aspx.designer.cs">
+      <DependentUpon>Sayfa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SonGelismeler.aspx.cs">
+      <DependentUpon>SonGelismeler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SonGelismeler.aspx.designer.cs">
+      <DependentUpon>SonGelismeler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TumEgitimler.aspx.cs">
+      <DependentUpon>TumEgitimler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TumEgitimler.aspx.designer.cs">
+      <DependentUpon>TumEgitimler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TumEtkinlikler.aspx.cs">
+      <DependentUpon>TumEtkinlikler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TumEtkinlikler.aspx.designer.cs">
+      <DependentUpon>TumEtkinlikler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TumFotoAlbumler.aspx.cs">
+      <DependentUpon>TumFotoAlbumler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TumFotoAlbumler.aspx.designer.cs">
+      <DependentUpon>TumFotoAlbumler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TumHaberlerVeDuyurular.aspx.cs">
+      <DependentUpon>TumHaberlerVeDuyurular.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TumHaberlerVeDuyurular.aspx.designer.cs">
+      <DependentUpon>TumHaberlerVeDuyurular.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TumIlanlarVeDuyurular.aspx.cs">
+      <DependentUpon>TumIlanlarVeDuyurular.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TumIlanlarVeDuyurular.aspx.designer.cs">
+      <DependentUpon>TumIlanlarVeDuyurular.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebServices\EventsActions.asmx.cs">
+      <DependentUpon>EventsActions.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\MessageActions.asmx.cs">
+      <DependentUpon>MessageActions.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\Types\EventsType.cs" />
+    <Compile Include="WebServices\Types\MessageType.cs" />
+    <Compile Include="WebServices\PhotoAlbum.asmx.cs">
+      <DependentUpon>PhotoAlbum.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\Types\PhotoAlbums.cs" />
+    <Compile Include="WebServices\IlanHaberDuyuru.asmx.cs">
+      <DependentUpon>IlanHaberDuyuru.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="bin\" />
+    <Folder Include="FileManager\" />
+    <Folder Include="Gorseller\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Admin.Master" />
+    <Content Include="Admin\AdminSub.Master" />
+    <None Include="Admin\Theme\Images\icon\Thumbs.db" />
+    <None Include="Admin\Theme\Images\menuicon\Thumbs.db" />
+    <None Include="Admin\Theme\Images\Thumbs.db" />
+    <EntityDeploy Include="Kutuphaneler\DataModels\EnrollPortalModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EnrollPortalModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App_Themes\MainTheme\Images\Galeri\Thumbs.db" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\DataModels\EnrollPortalModel.csdl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\DataModels\EnrollPortalModel.msl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\DataModels\EnrollPortalModel.ssdl" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50340</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,5 @@
+﻿.AnaTablo { width: 700px; }
+.Sol { width: 140px; padding: 2px; vertical-align: top; }
+.Orta { width: 10px; padding: 2px; text-align: center; vertical-align: top; }
+.Sag { width: 550px; /*padding: 2px;*/
+    vertical-align: top; text-align: left; }
